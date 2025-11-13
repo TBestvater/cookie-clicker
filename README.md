@@ -73,7 +73,27 @@ docker build -t cookie-clicker-backend:latest .
 - kubectl configured to connect to your cluster
 - Docker images built and available to your cluster
 
-### Deploy to Kubernetes
+### Quick Deploy (Using Script)
+
+For a quick deployment, use the automated deployment script:
+
+```bash
+./deploy.sh
+```
+
+This script will:
+- Build both Docker images
+- Load images into minikube (if available)
+- Deploy all Kubernetes resources
+- Wait for deployments to be ready
+
+To cleanup:
+
+```bash
+./cleanup.sh
+```
+
+### Manual Deploy to Kubernetes
 
 1. **Create namespace**:
    ```bash
